@@ -5,8 +5,8 @@ class MessageForm extends Component {
         return (
             <form className ="MessageForm">
                 <input
-                autoFocus
-                required
+                    autoFocus
+                    required
                     type ='text'
                     name = 'body'
                     placehodler = 'Type a message...'
