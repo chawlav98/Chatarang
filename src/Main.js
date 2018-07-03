@@ -19,6 +19,7 @@ const styles = {
     alignItems: 'stretch',
     height: '100vh',
     
+
 }
 
 export default Main
