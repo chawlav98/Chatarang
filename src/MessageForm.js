@@ -9,7 +9,7 @@ class MessageForm extends Component {
                     required
                     type ='text'
                     name = 'body'
-                    placehodler = 'Type a message...'
+                    placeholder = 'Type a message...'
                 />
                 <button type = 'submit'>
                     Send
