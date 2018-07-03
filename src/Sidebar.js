@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-class Sidebar extends Component {
+const Sidebar =  (props) => {
     render() {
         return(
             <div className = 'Sidebar'>
