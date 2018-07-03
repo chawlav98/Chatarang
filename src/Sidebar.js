@@ -1,13 +1,11 @@
 import React from 'react'
 
-const Sidebar =  (props) => {
-    render() {
-        return(
-            <div className = 'Sidebar'>
-                Sidebar
-            </div>
-        )
-    }
+const Sidebar = (props) => {
+  return (
+    <div className="Sidebar">
+      {props.user.displayName}
+    </div>
+  )
 }
 
 export default Sidebar
