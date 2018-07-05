@@ -2,6 +2,7 @@ import React from 'react'
 
 import UserInfo from './UserInfo'
 
+
 const Sidebar = (props) => {
   return (
     <aside
