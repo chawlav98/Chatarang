@@ -3,6 +3,7 @@ import 'firebase/database'
 import 'firebase/auth'
 import Rebase from 're-base'
 
+
 const config = {
   apiKey: "YOUR API KEY",
   authDomain: "YOUR AUTH DOMAIN",
@@ -15,6 +16,7 @@ const config = {
 const app = firebase.initializeApp(config)
 
 export const googleProvider = new firebase.auth.GoogleAuthProvider()
+export const githubProvider = new firebase.auth.GithubAuthProvider()
 export const auth = firebase.auth()
 
 
