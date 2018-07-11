@@ -5,14 +5,29 @@ import { auth, googleProvider, githubProvider } from './base'
 
 class SignIn extends Component {
   state = {
-    email: '',
+    user: {
+      email: '',
+      password: '',
+    }
   }
 
   authenticate = (provider) => {
     auth.signInWithPopup(provider)
   }
 
+  handleChange = (ev) => {
+    const user = {...this.state.user}
+    user[ev.target.name] = ev.target.value
+    this.setState({ user })
+  }
 
+  handleSubmit = (ev) => {
+    ev.preventDefault()
+    auth.signInWithEmailAndPassword(
+      this.state.user.email,
+      this.state.user.password
+    )
+  }
 
   render() {
     return (
@@ -29,6 +44,44 @@ class SignIn extends Component {
             onSubmit={this.handleSubmit}
           >
             <h2>Sign In</h2>
+
+            <label
+              htmlFor="email"
+              className={css(styles.label)}
+            >
+              Email
+            </label>
+            <input
+              autoFocus
+              required
+              type="email"
+              name="email"
+              className={css(styles.input)}
+              value={this.state.user.email}
+              onChange={this.handleChange}
+            />
+
+            <label
+              htmlFor="password"
+              className={css(styles.label)}
+            >
+              Password
+            </label>
+            <input
+              required
+              type="password"
+              name="password"
+              className={css(styles.input)}
+              value={this.state.user.password}
+              onChange={this.handleChange}
+            />
+
+            <button
+              type="submit"
+              className={css(styles.button)}
+            >
+              Sign In
+            </button>
 
             <button
               type="button"
