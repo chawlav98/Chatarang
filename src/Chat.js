@@ -84,4 +84,4 @@ const styles = {
   flexDirection: 'column',
 }
 
-export default Chat
+export default Chat 
